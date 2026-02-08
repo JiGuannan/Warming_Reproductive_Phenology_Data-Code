@@ -6,7 +6,7 @@ library(hrbrthemes)
 library(gghalves)
 library(tidyr)
 library(readxl)
-df_long4_80 <- read_xlsx(path.expand("~/Desktop/data_Fig1.xlsx"))
+df_long4_80 <- read_xlsx(path.expand("data_Fig1.xlsx"))
 ggplot(df_long4_80, aes(x = Group, y = St, fill = Group)) +
   theme(panel.background = element_rect(fill = "white"))+
   theme( axis.line = element_line(colour = "black"))+
@@ -27,7 +27,7 @@ ggplot(df_long4_80, aes(x = Group, y = St, fill = Group)) +
 # START
 library(ggplot2)
 library(readxl)
-frt_hshp <- read_xlsx(path.expand("~/Desktop/data_Fig2.xlsx"))
+frt_hshp <- read_xlsx(path.expand("data_Fig2.xlsx"))
 frt_hshp$Category <- factor(frt_hshp$Category, 
                                levels = c("Significant Increase", "Significant Decrease", "Non-significant Increase", "Non-significant Decrease"))
 data <- frt_hshp %>% 
@@ -84,7 +84,7 @@ library(ggplot2)
 library(gridExtra)
 library(ggpubr)
 library(readxl)
-frtem_df <- read_xlsx(path.expand("~/Desktop/data_Fig3.xlsx"))
+frtem_df <- read_xlsx(path.expand("data_Fig3.xlsx"))
 frtem_df$change <- factor(
   frtem_df$change,
   levels = c("Significant Increase",
@@ -187,7 +187,7 @@ library(partR2)
 library(dplyr)
 require(plyr)
 library(readxl)
-aa <- read_xlsx(path.expand("~/Desktop/data_Fig4.xlsx"))
+aa <- read_xlsx(path.expand("data_Fig4.xlsx"))
 aa <- aa[complete.cases(aa), ]
 names(aa)[1:3] <- c("Year", "Site", "Species")
 func_unique <- function(a)
